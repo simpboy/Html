@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>商品详情</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container productPage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">商品详情</div>
+					<div class="headerIcon car">&#xe63f;</div>
+				</div>
+			</div>
+		</div>
+		<!-- 产品图册 -->
+		<div class="swiper-container productAlbum">
+		    <div class="swiper-wrapper" id="productAlbum">
+		        <div class="swiper-slide">
+					<img src="images/del/11.jpg" alt="Image 01" />
+		        </div>
+		        <div class="swiper-slide">
+					<img src="images/del/22.jpg" alt="Image 02" />
+		        </div>
+		        <div class="swiper-slide">
+					<img src="images/del/33.jpg" alt="Image 02" />
+		        </div>
+		    </div>
+		    <div class="swiper-pagination"></div>
+		</div>
+		<!-- 基础信息 -->
+		<div class="proInfo">
+			<div class="left">
+				<div class="title">进口原浆干红高档礼盒套装进口原浆干红高档礼盒套装<span>包邮</span></div>
+				<div class="price">
+					<p>￥280.00</p>
+					<span>￥468.00</span>
+					<b>已售3685</b>
+				</div>
+			</div>
+			<div class="right">
+				<a href="#"><span>&#xe6cc;</span>我要推广</a>
+			</div>
+		</div>
+		<!-- 数量选择 -->
+		<div class="proNumber">
+			<div class="txt">数量：</div>
+			<div class="number">
+				<a href="javascript:;" class="jian">&#xe6ba;</a>
+				<input type="tel" value="1" maxlength="3" >
+				<a href="javascript:;" class="jia">&#xe6b9;</a>
+			</div>
+			<div class="go">
+				<a href="#">立即抢购</a>
+			</div>
+		</div>
+		<!-- 产品内容 -->
+		<div class="proContent proTab">
+			<ul class="tapList">
+				<li class="cur">图文详情</li>
+				<li>产品参数</li>
+				<li>用户评价</li>
+				<li>同店推荐</li>
+			</ul>
+			<ul class="textList">
+				<li class="cur">
+					<div class="proTuwen">
+						<img src="images/del/3.jpg" alt="">
+						<img src="images/del/3.jpg" alt="">
+					</div>
+				</li>
+				<li>
+					<div class="proParamaters">
+						<div class="list">
+							<span>产品编号</span>
+							<p>PG201506075822</p>
+						</div>
+						<div class="list">
+							<span>产品名称</span>
+							<p>苹果</p>
+						</div>
+						<div class="list">
+							<span>产品属性</span>
+							<p>你要什么就是什么</p>
+						</div>
+						<div class="list">
+							<span>产品编号</span>
+							<p>PG201506075822</p>
+						</div>
+						<div class="list">
+							<span>产品名称</span>
+							<p>苹果</p>
+						</div>
+						<div class="list">
+							<span>产品属性</span>
+							<p>你要什么就是什么</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="proComment">
+						<div class="list">
+							<div class="item">
+								<div class="un">小苹果</div>
+								<div class="text">这作为一件商品来说，很不错，很棒。666啊，握草。</div>
+								<div class="ps">
+									<span>2017-08-17</span>
+									<span>颜色分类：红色</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="un">小苹果</div>
+								<div class="text">这作为一件商品来说，很不错，很棒。666啊，握草。这作为一件商品来说，很不错，很棒。666啊，握草。这作为一件商品来说，很不错，很棒。666啊，握草。</div>
+								<div class="ps">
+									<span>2017-08-17</span>
+									<span>颜色分类：红色</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="un">小苹果</div>
+								<div class="text">这作为一件商品来说，很不错，很棒。666啊，握草。</div>
+								<div class="ps">
+									<span>2017-08-17</span>
+									<span>颜色分类：红色</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="proMore">
+						<div class="list">
+							<div class="item">
+								<a href="#">
+									<div class="img">
+										<img src="images/del/1.jpg" alt="">
+									</div>
+									<div class="title">超级流弊的产品，未来300年都不能超越</div>
+									<div class="price">
+										<p>￥99.00</p>
+										<span>999人已买</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<div class="img">
+										<img src="images/del/1.jpg" alt="">
+									</div>
+									<div class="title">超级流弊的产品，未来300年都不能超越</div>
+									<div class="price">
+										<p>￥99.00</p>
+										<span>999人已买</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<div class="img">
+										<img src="images/del/1.jpg" alt="">
+									</div>
+									<div class="title">超级流弊的产品，未来300年都不能超越</div>
+									<div class="price">
+										<p>￥99.00</p>
+										<span>999人已买</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 底部浮动栏 -->
+		<div class="proFloat">
+			<a href="#" class="collect">&#xe666;</a>
+			<a href="#" class="car">&#xe63f;</a>
+			<a href="javascript:;" class="addCar">加入购物车</a>
+			<a href="javascript:;" class="buy">立即购买</a>
+		</div>
+		<!-- 弹出addcar buy弹窗 -->
+		<div class="proDetailHideBox">
+			<div class="proDetailBox">
+				<div class="close">&#xe69a;</div>
+				<div class="top">
+					<div class="img">
+						<img src="images/del/1.jpg" alt="">
+					</div>
+					<div class="text">
+						<div class="price">￥99.00 - ￥999.00</div>
+						<div class="num">库存984525件</div>
+						<div class="type">
+							<p>选择</p>
+							<span>颜色分类</span>
+						</div>
+					</div>
+				</div>
+				<div class="types">
+					<dl>
+						<dt>颜色分类</dt>
+						<dd>
+							<a href="javascript:;">苹果 A</a>
+							<a href="javascript:;">苹果香蕉梨子</a>
+							<a href="javascript:;">所有水果的总和名称</a>
+							<a href="javascript:;">苹果 A</a>
+							<a href="javascript:;">苹果 A</a>
+							<a href="javascript:;">苹果 A</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="btn">
+					<a href="javascript:;">确定</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/swiper.jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		// 产品图集
+		var productAlbum = Swiper('.productAlbum',{
+			pagination: '.swiper-pagination',
+		});
+
+		// 数字加减
+		MALL.numberModify('.proNumber');
+
+		// 切换
+		MALL.tabbox('.proTab');
+
+		// 加入
+		MALL.proDetailBox('.proFloat .addCar','.proDetailHideBox');
+
+	</script>
+</body>
+</html>

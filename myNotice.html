@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>我的公告</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body style="background:#f5f5f5;">
+	<div class="container setMessagePage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">我的公告</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- myNotice -->
+		<div class="myNotice">
+			<div class="list">
+				<a href="#" class="item">
+					<div class="img">
+						<img src="images/del/1.jpg" alt="">
+					</div>
+					<div class="text">
+						<h3>山里元素合作快递表</h3>
+						<p>2016-08-28 14:33</p>
+					</div>
+				</a>
+				<a href="#" class="item">
+					<div class="img">
+						<img src="images/del/1.jpg" alt="">
+					</div>
+					<div class="text">
+						<h3>山里元素合作快递表</h3>
+						<p>2016-08-28 14:33</p>
+					</div>
+				</a>
+				<a href="#" class="item">
+					<div class="img">
+						<img src="images/del/1.jpg" alt="">
+					</div>
+					<div class="text">
+						<h3>山里元素合作快递表</h3>
+						<p>2016-08-28 14:33</p>
+					</div>
+				</a>
+				<a href="#" class="item">
+					<div class="img">
+						<img src="images/del/1.jpg" alt="">
+					</div>
+					<div class="text">
+						<h3>山里元素合作快递表</h3>
+						<p>2016-08-28 14:33</p>
+					</div>
+				</a>
+				<a href="#" class="item">
+					<div class="img">
+						<img src="images/del/1.jpg" alt="">
+					</div>
+					<div class="text">
+						<h3>山里元素合作快递表</h3>
+						<p>2016-08-28 14:33</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		
+	</script>
+</body>
+</html>

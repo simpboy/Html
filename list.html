@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>商城列表</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container listPage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon menu" onclick="MALL.leftMenu('.leftMenu');">&#xe68d;</div>
+					<div class="title">全部商品</div>
+					<div class="headerIcon sousuo" id="sousuo">&#xe620;</div>
+				</div>
+			</div>
+		</div>
+		<!-- 隐藏搜索区域 -->
+		<div class="hideSearch">
+			<div class="top">
+				<div class="back">&#xe693;</div>
+				<div class="search">
+					<input type="text" placeholder="搜索商品" id="searchInput">
+					<label>&#xe620;</label>
+				</div>
+				<div class="clearf"></div>
+				<ul class="searchlist" id="searchlist">
+					<li>
+						<a href="#">1111<b>1</b>11111111</a>
+					</li>
+					<li>
+						<a href="#">222222222</a>
+					</li>
+					<li>
+						<a href="#">333333333333</a>
+					</li>
+					<li>
+						<a href="#">44444444444444</a>
+					</li>
+					<li>
+						<a href="#">55555555555555</a>
+					</li>
+				</ul>
+			</div>
+			<div class="chang">
+				<div class="title">最近搜索</div>
+				<div class="list">
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+					<a href="#">最新型苹果</a>
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+				</div>
+			</div>
+			<div class="chang">
+				<div class="title">热门搜索</div>
+				<div class="list">
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+					<a href="#">最新型苹果</a>
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+				</div>
+			</div>
+		</div>
+		<!-- 左侧菜单 -->
+		<div class="leftMenu">
+			<div class="title">
+				<span>&#xe68d;</span>
+				<p>全部分类</p>
+			</div>
+			<ul class="list">
+				<li>
+					<a href="#">
+						<span>&#xe620;</span>
+						<p>新上宝贝</p>
+						<b>&#xe694;</b>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>&#xe620;</span>
+						<p>新上宝贝</p>
+						<b>&#xe694;</b>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>&#xe620;</span>
+						<p>新上宝贝</p>
+						<b>&#xe694;</b>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>&#xe620;</span>
+						<p>新上宝贝</p>
+						<b>&#xe694;</b>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>&#xe620;</span>
+						<p>新上宝贝</p>
+						<b>&#xe694;</b>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 子菜单 -->
+		<div class="swiper-container subMenu">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide">
+					<a href="#">子菜单1</a>
+	            </div>
+	            <div class="swiper-slide">
+					<a href="#">子菜单2</a>
+	            </div>
+	            <div class="swiper-slide">
+					<a href="#">子菜单3</a>
+	            </div>
+	            <div class="swiper-slide">
+					<a href="#">子菜单4</a>
+	            </div>
+	            <div class="swiper-slide">
+					<a href="#">子菜单5</a>
+	            </div>
+	            <div class="swiper-slide">
+					<a href="#">子菜单6</a>
+	            </div>
+	        </div>
+	    </div>
+		<!-- 推荐商品 -->
+		<div class="showProduct">
+			<ul class="list">
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/1.jpg" alt="">
+						</div>
+						<h4>超级新鲜的水果，大草莓哦</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/2.jpg" alt="">
+						</div>
+						<h4>橙光闪闪，这就是让人垂涎三尺的西红柿</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/1.jpg" alt="">
+						</div>
+						<h4>超级新鲜的水果，大草莓哦</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/2.jpg" alt="">
+						</div>
+						<h4>橙光闪闪，这就是让人垂涎三尺的西红柿</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/1.jpg" alt="">
+						</div>
+						<h4>超级新鲜的水果，大草莓哦</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/2.jpg" alt="">
+						</div>
+						<h4>橙光闪闪，这就是让人垂涎三尺的西红柿</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/1.jpg" alt="">
+						</div>
+						<h4>超级新鲜的水果，大草莓哦</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/2.jpg" alt="">
+						</div>
+						<h4>橙光闪闪，这就是让人垂涎三尺的西红柿</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/1.jpg" alt="">
+						</div>
+						<h4>超级新鲜的水果，大草莓哦</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<div class="img">
+							<img src="images/del/2.jpg" alt="">
+						</div>
+						<h4>橙光闪闪，这就是让人垂涎三尺的西红柿</h4>
+						<div class="price">
+							<p>￥46.00</p>
+							<span>￥85.00</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="loading">加载中...</div>
+		</div>
+		<div class="height100"></div>
+		<!-- footer -->
+		<div class="footer">
+			<ul class="list">
+				<li class="item cur">
+					<a href="#">
+						<span>&#xe61f;</span>
+						<p>首页</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe67b;</span>
+						<p>分类</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe673;</span>
+						<p>我的商城</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe63f;</span>
+						<p>购物车</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe657;</span>
+						<p>会员中心</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/swiper.jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		/*
+		 * 子菜单
+		 */
+		var subMenu = Swiper('.subMenu',{
+			slidesPerView : 4
+		})
+
+		/*
+		 * 滚动底部时超出范围加载新内容
+		 */
+		MALL.scrollAddList('.showProduct');
+
+		/*
+		 * 显示/隐藏搜索
+		 */
+		MALL.showSearchPage('.headerBox .sousuo','.hideSearch');
+
+		/*
+		 * 搜索商品
+		 */
+		function searchBox(){
+
+			var input = $('#searchInput').val(),
+				list = $('#searchlist'),
+				httpCall,
+				li = '';
+
+			// 清空列表
+			list.empty();
+			input = $.trim(input);
+			list.show();
+
+			if(input === ''){
+				list.hide();
+				return false;
+			}
+
+			if (httpCall) httpCall.abort();
+
+			httpCall = $.ajax({
+				type : 'post',
+				url : './js/list.json',
+				dataType : 'json',
+				beforeSend : function(){
+					list.html('<li>数据查询中...</li>');
+				},
+				success : function(str){
+					for(var i=0;i<str.lists.length;i++){
+						li += '<li><a href="'+str.lists[i]['link']+'">'+str.lists[i]['title']+'</a></li>';
+					}
+					list.html(li);
+				}
+			});
+
+		}
+		$('#searchInput').on('input',function(){
+			searchBox();
+		});
+	</script>
+</body>
+</html>

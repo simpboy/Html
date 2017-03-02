@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>新闻内容</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container setMessagePage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">新闻内容</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- newsdetail -->
+		<div class="newsDetail">
+			<div class="title">
+				<h1>刘强东返乡捐1亿 当地人称人人知道的只有项羽和刘强东</h1>
+				<p>
+					<span>日期：2017/08/09</span>
+					<span>浏览：252</span>
+				</p>
+			</div>
+			<article>
+				<P>在众多互联网富豪中，多年来刘强东对于家乡的反哺力度可谓无出其右，而且是一“发”不可收拾，即发“鱼”，也发“渔”。</P>
+				<P>2月28日，京东集团CEO刘强东携夫人章泽天再度回到老家江苏省宿迁市，两人宣布，将向宿迁市捐赠逾1亿元，用于当地的教育、文化、养老及扶弱帮贫等公益事业，具体包括一所全国最好的幼儿园、一所全国最好的养老院以及市民广场等。</P>
+				<P>除了“鱼”之外，作为宿迁人民的“媳妇”，章泽天还将自己的母校、全国知名学校——南京外国语学校引入到宿迁，建立南京外国语学校仙林分校宿迁学校，学校将于明年9月开始招生，首期将包含幼儿园、小学和初中，后续还将设立高中部。</P>
+				<P>宿迁校区目标是超过本校</P>
+				<P>在业界看来，刘强东与章泽天此举，对于宿迁的意义比金钱更加长久。能够将南京外国语学校引入到苏北宿迁落地，远非金钱所能办到。除了相关流程、学校硬件等之外，如何能够引进优质的师资至关重要。</P>
+				<P>为此，刘强东也是放出了诱人的条件：“一个好的学校必须要有最优秀的老师。我们将给每位老师都提供免费住宿，装修好的房子拎包入住即可，甚至连床单被套都是放好的。在学校连续工作十年，其中获得过两次优秀的老师，我们还将赠送给老师一套精装修的房子。我们将通过一系列举措，来吸引江苏乃至全国、全世界的优秀教师加入学校。我对学校的希望是，有朝一日能够超过本部。”</P>
+				<P>作为“南外”落户宿迁的红娘，天强慈善基金发起人章泽天表示：“这么长时间，我们一直都觉得我们做的慈善其实还处在非常初步的阶段，很多问题仅仅是通过捐钱是没有办法解决的，比如说教育。我们之前和宿迁的亲戚聊天的时候，就听说很多朋友都是把自己的孩子送到南京，苏州去上学。我们以前关注的是留守儿童的问题，现在则变成了留守父母的问题。另一方面，更多的宿迁人没有这么多资源和能力送孩子去外地上学，只能留在当地，教育的选择并不多。为了解决这个问题，我跟老刘也是思考了很久。”</P>
+			</article>
+		</div>
+
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		
+	</script>
+</body>
+</html>

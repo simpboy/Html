@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>用户中心</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/user.css">
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container userPage">
+		<!-- userHead -->
+		<div class="userHead">
+			<div class="photo">
+				<img src="images/del/5.jpg" alt="">
+			</div>
+			<div class="userName">
+				<p>动感超人</p>
+				<span>[普通会员]</span>
+			</div>
+			<div class="set">
+				<a href="#">&#xe64b;</a>
+			</div>
+		</div>
+		<div class="userMoney userList">
+			<div class="userItem yue">
+				<a href="javascript:;">
+					<p>余额：</p>
+					<b>0.00</b>
+					<!-- <i>&#xe694;</i> -->
+				</a>
+			</div>
+			<div class="userItem jifen">
+				<a href="javascript:;">
+					<p>积分：</p>
+					<b>0.00</b>
+					<!-- <i>&#xe694;</i> -->
+				</a>
+			</div>
+		</div>
+		<div class="userCargo">
+			<a href="#">
+				<span>&#xe655;</span>
+				<p>全部订单</p>
+				<b>查看我的全部订单</b>
+				<i>&#xe694;</i>
+			</a>
+		</div>
+		<div class="userCargoList">
+			<div class="list">
+				<a href="#">
+					<span>&#xe6de;</span>
+					<p>待付款</p>
+				</a>
+				<a href="#">
+					<span>&#xe674;</span>
+					<p>待发货</p>
+				</a>
+				<a href="#">
+					<span>&#xe6b1;</span>
+					<p>待收货</p>
+				</a>
+				<a href="#">
+					<span>&#xe6dd;</span>
+					<p>待退款</p>
+				</a>
+			</div>
+		</div>
+		<div class="singleList">
+			<a href="#" class="myInfo">
+				<span>&#xe657;</span>
+				<p>我的资料</p>
+				<i>&#xe694;</i>
+			</a>
+		</div>
+		<div class="singleList">
+			<a href="#" class="myCar">
+				<span>&#xe63f;</span>
+				<p>我的购物车</p>
+				<i>&#xe694;</i>
+			</a>
+			<a href="#" class="myCollect">
+				<span>&#xe666;</span>
+				<p>我的收藏</p>
+				<i>&#xe694;</i>
+			</a>
+			<a href="#" class="myFootPrint">
+				<span>&#xe6c1;</span>
+				<p>我的足迹</p>
+				<i>&#xe694;</i>
+			</a>
+			<a href="#" class="setMessage">
+				<span>&#xe64c;</span>
+				<p>消息提醒设置</p>
+				<i>&#xe694;</i>
+			</a>
+		</div>
+		<div class="singleList">
+			<a href="#" class="myMoney">
+				<span>&#xe6de;</span>
+				<p>充值记录</p>
+				<i>&#xe694;</i>
+			</a>
+		</div>
+		<div class="singleList">
+			<a href="#" class="myPosition">
+				<span>&#xe652;</span>
+				<p>收货地址</p>
+				<i>&#xe694;</i>
+			</a>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<ul class="list">
+				<li class="item cur">
+					<a href="#">
+						<span>&#xe61f;</span>
+						<p>首页</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe67b;</span>
+						<p>分类</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe673;</span>
+						<p>我的商城</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe63f;</span>
+						<p>购物车</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe657;</span>
+						<p>会员中心</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/swiper.jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		/*
+		 * 子菜单
+		 */
+		var subMenu = Swiper('.subMenu',{
+			slidesPerView : 4
+		})
+
+		/*
+		 * 滚动底部时超出范围加载新内容
+		 */
+		MALL.scrollAddList('.showProduct');
+
+		/*
+		 * 显示/隐藏搜索
+		 */
+		MALL.showSearchPage('.headerBox .sousuo','.hideSearch');
+
+		/*
+		 * 搜索商品
+		 */
+		function searchBox(){
+
+			var input = $('#searchInput').val(),
+				list = $('#searchlist'),
+				httpCall,
+				li = '';
+
+			// 清空列表
+			list.empty();
+			input = $.trim(input);
+			list.show();
+
+			if(input === ''){
+				list.hide();
+				return false;
+			}
+
+			if (httpCall) httpCall.abort();
+
+			httpCall = $.ajax({
+				type : 'post',
+				url : './js/list.json',
+				dataType : 'json',
+				beforeSend : function(){
+					list.html('<li>数据查询中...</li>');
+				},
+				success : function(str){
+					for(var i=0;i<str.lists.length;i++){
+						li += '<li><a href="'+str.lists[i]['link']+'">'+str.lists[i]['title']+'</a></li>';
+					}
+					list.html(li);
+				}
+			});
+
+		}
+		$('#searchInput').on('input',function(){
+			searchBox();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿index		首页
+list		商品列表
+product		商品详细
+buycar		购物车
+user		用户中心
+address		设置收货地址
+myCollect	我的收藏
+myFootPrint	我的足迹
+myInfo		我的资料
+myNotice	公告
+myOrder		我的订单
+setMessage	设置消息
+newsDetail	新闻内容
+type		分类
+myPay		充值中心

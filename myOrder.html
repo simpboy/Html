@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>我的订单</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/user.css">
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body style="background:#f0f0f0;">
+	<div class="container myOrderPage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">我的订单</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- tab -->
+		<div class="myOrderTab">
+			<ul class="tapList">
+				<li class="cur">全部</li>
+				<li>待付款</li>
+				<li>待发货</li>
+				<li>待收货</li>
+				<li>已完成</li>
+			</ul>
+			<ul class="textList">
+				<li class="cur">
+					<!-- 如果没有数据时 显示 -->
+					<div class="notOrderList">
+						<i>&#xe655;</i>
+						<p>您还没有相关订单</p>
+						<span>可以去看看哪些想买的</span>
+						<a href="#">随便逛逛</a>
+					</div>
+				</li>
+				<li>
+					<!-- 如果有数据时 显示 -->
+					<div class="myOrderList">
+						<div class="item">
+							<div class="itemBox">
+								<div class="img">
+									<img src="images/del/1.jpg" alt="">
+								</div>
+								<div class="text">
+									<h3>中国铁建梅溪青秀项目简介</h3>
+									<span>颜色分类:红色</span>
+								</div>
+								<div class="price">
+									<p>￥99.00</p>
+									<span>￥199.00</span>
+									<b>×1</b>
+								</div>
+							</div>
+							<div class="itemBtn">
+								<a href="javascript:;">删除订单</a>
+								<a href="javascript:;">评价</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemBox">
+								<div class="img">
+									<img src="images/del/1.jpg" alt="">
+								</div>
+								<div class="text">
+									<h3>中国铁建梅溪青秀项目简介</h3>
+									<span>颜色分类:红色</span>
+								</div>
+								<div class="price">
+									<p>￥99.00</p>
+									<span>￥199.00</span>
+									<b>×1</b>
+								</div>
+							</div>
+							<div class="itemBtn">
+								<a href="javascript:;">删除订单</a>
+								<a href="javascript:;">评价</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemBox">
+								<div class="img">
+									<img src="images/del/1.jpg" alt="">
+								</div>
+								<div class="text">
+									<h3>中国铁建梅溪青秀项目简介</h3>
+									<span>颜色分类:红色</span>
+								</div>
+								<div class="price">
+									<p>￥99.00</p>
+									<span>￥199.00</span>
+									<b>×1</b>
+								</div>
+							</div>
+							<div class="itemBtn">
+								<a href="javascript:;">删除订单</a>
+								<a href="javascript:;">评价</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+		
+
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		var myOrder = function(){
+			// tab
+			MALL.tabbox('.myOrderTab');
+		}
+		myOrder();
+	</script>
+</body>
+</html>
