@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>我的资料</title>
+	<link href="css/mobiscroll.custom-2.6.2.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/user.css">
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container myInfoPage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">我的资料</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- info -->
+		<div class="myInfoBox">
+			<div class="item">
+				<span>姓名</span>
+				<input type="text" placeholder="请输入您的姓名">
+			</div>
+			<div class="item phone">
+				<span>手机号码</span>
+				<input type="tel" placeholder="请输入您的手机号码">
+			</div>
+			<div class="item wx">
+				<span>微信号</span>
+				<input type="text" placeholder="请输入微信号">
+			</div>
+			<div class="item sex">
+				<span>性别</span>
+				<label data-sex="0">
+					<i class="no">&#xe72f;</i>
+					<i class="yes">&#xe730;</i>
+					<b>男</b>
+				</label>
+				<label data-sex="1">
+					<i class="no">&#xe72f;</i>
+					<i class="yes">&#xe730;</i>
+					<b>女</b>
+				</label>
+			</div>
+			<div class="item city">
+				<span>所在城市</span>
+				<div class="cityBox" id="expressArea">
+					<input type="text" placeholder="省、市、区" readonly="readonly">
+					<i>&#xe694;</i>
+				</div>
+			</div>
+			<div class="item date">
+				<span>生日</span>
+				<input type="text" id="shengri" placeholder="点击选择日期" readonly="readonly">
+			</div>
+		</div>
+		<div class="myInfoBtn">
+			<button>确认修改</button>
+		</div>
+		<!--选择地区弹层-->
+        <section id="areaLayer" class="express-area-box">
+            <header>
+                <h3>选择地区</h3>
+                <a id="backUp" class="back" href="javascript:void(0)" title="返回"></a>
+                <a id="closeArea" class="close" href="javascript:void(0)" title="关闭">&#xe69a;</a>
+            </header>
+            <article id="areaBox">
+                <ul id="areaList" class="area-list"></ul>
+            </article>
+        </section>
+        <!--遮罩层-->
+        <div id="areaMask" class="mask"></div>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/mobiscroll.custom-2.6.2.min.js" type="text/javascript"></script>
+	<script src="js/jquery.area.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+
+		// 选择生日
+		var shengri = (function(){
+
+			var currYear = (new Date()).getFullYear();
+
+			$('#shengri').mobiscroll().date({  
+		        theme : 'android-ics light',  
+		        display : 'bottom',
+		        lang : 'zh',
+		        startYear : currYear - 10,
+		        endYear : currYear + 10,
+		        dateFormat : 'yyyy-mm-dd',
+		        dateOrder : 'yymmdd',
+		    });
+		})();
+
+		// 选择性别
+		var selectSex = (function(){
+			var box = $('.myInfoBox .sex');
+
+			box.on('click','label',function(){
+				var that = $(this);
+				if(!that.hasClass('cur'))
+				{
+					$('label',box).removeClass('cur');
+					that.addClass('cur');
+				}
+			})
+		})();
+		
+	</script>
+</body>
+</html>

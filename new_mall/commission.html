@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>我的佣金</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/user.css">
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body style="background:#f0f0f0;">
+	<div class="container commissionPage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">我的佣金</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- tab -->
+		<div class="myOrderTab">
+			<ul class="tapList">
+				<li class="cur">所有订单</li>
+				<li>待付款</li>
+				<li>已付款</li>
+				<li>已完成</li>
+			</ul>
+			<ul class="textList">
+				<li class="cur">
+					<!-- 如果没有数据时 显示 -->
+					<div class="notOrderList">
+						<i>&#xe655;</i>
+						<p>您还没有相关订单</p>
+						<span>可以去看看哪些想买的</span>
+						<a href="#">随便逛逛</a>
+					</div>
+				</li>
+				<li>
+					<!-- 如果有数据时 显示 -->
+					<div class="myOrderList">
+						<div class="item">
+							<div class="itemNumber">
+								<div class="number">
+									<p>SH201702271529370441(一级)</p>
+									<span>2017-02-27 15:29</span>
+								</div>
+								<div class="money">
+									<p>+2.05</p>
+									<span>待付款</span>
+								</div>
+							</div>
+							<div class="itemUser">
+								<div class="img">
+									<img src="images/del/5.jpg" alt="">
+								</div>
+								<div class="text">
+									<p>dongganchaoren</p>
+									<span>微信号：15688889999</span>
+								</div>
+							</div>
+							<div class="itemPro">
+								<div class="img">
+									<img src="images/del/1.jpg" alt="">
+								</div>
+								<div class="text">
+									<p>苹果醋一箱88原(750ml×6瓶)</p>
+									<span>×6</span>
+								</div>
+								<div class="yongj">
+									<p>预计佣金</p>
+									<span>+5.02</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemNumber">
+								<div class="number">
+									<p>SH201702271529370441(一级)</p>
+									<span>2017-02-27 15:29</span>
+								</div>
+								<div class="money">
+									<p>+2.05</p>
+									<span>待付款</span>
+								</div>
+							</div>
+							<div class="itemUser">
+								<div class="img">
+									<img src="images/del/5.jpg" alt="">
+								</div>
+								<div class="text">
+									<p>dongganchaoren</p>
+									<span>微信号：15688889999</span>
+								</div>
+							</div>
+							<div class="itemPro">
+								<div class="img">
+									<img src="images/del/1.jpg" alt="">
+								</div>
+								<div class="text">
+									<p>苹果醋一箱88原(750ml×6瓶)</p>
+									<span>×6</span>
+								</div>
+								<div class="yongj">
+									<p>预计佣金</p>
+									<span>+5.02</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="itemNumber">
+								<div class="number">
+									<p>SH201702271529370441(一级)</p>
+									<span>2017-02-27 15:29</span>
+								</div>
+								<div class="money">
+									<p>+2.05</p>
+									<span>待付款</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		
+
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		var myOrder = function(){
+			// tab
+			MALL.tabbox('.myOrderTab');
+		}
+		myOrder();
+	</script>
+</body>
+</html>

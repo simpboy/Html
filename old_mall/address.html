@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>收货地址</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/user.css">
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body style="background:#f5f5f5;">
+	<div class="container addressPage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">收货地址</div>
+					<div class="ads">新增+</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- address -->
+		<div class="addressList">
+			<div class="item">
+				<div class="top">
+					<p>张三丰</p>
+					<span>13899996666</span>
+				</div>
+				<div class="dizhi">长沙市雨花区香樟路超级公寓</div>
+				<div class="edit">
+					<div class="sel">
+						<span class="no">&#xe72f;</span>
+						<span class="yes">&#xe730;</span>
+					</div>
+					<div class="txt">设为默认</div>
+					<div class="btn">
+						<a href="javascript:;">编辑</a>
+						<a href="javascript:;">删除</a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="top">
+					<p>张三丰</p>
+					<span>13899996666</span>
+				</div>
+				<div class="dizhi">长沙市雨花区香樟路超级公寓</div>
+				<div class="edit">
+					<div class="sel">
+						<span class="no">&#xe72f;</span>
+						<span class="yes">&#xe730;</span>
+					</div>
+					<div class="txt">设为默认</div>
+					<div class="btn">
+						<a href="javascript:;">编辑</a>
+						<a href="javascript:;">删除</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 新增地址 -->
+		<div class="addressBox animated">
+			<div class="top">
+				<div class="back">&#xe693;</div>
+				<div class="title">新增收货地址</div>
+			</div>
+			<div class="list">
+				<div class="line">
+					<input type="text" placeholder="收货人姓名">
+				</div>
+				<div class="line">
+					<input type="tel" placeholder="收货人电话">
+				</div>
+				<div class="line area" id="expressArea">
+					<input type="text" placeholder="省、市、区" readonly="readonly">
+					<i>&#xe694;</i>
+				</div>
+				<div class="line">
+					<input type="text" placeholder="街道">
+				</div>
+				<div class="line">
+					<textarea name="" id="" cols="30" rows="10" placeholder="详细地址"></textarea>
+				</div>
+			</div>
+		</div>
+		<!--选择地区弹层-->
+        <section id="areaLayer" class="express-area-box">
+            <header>
+                <h3>选择地区</h3>
+                <a id="backUp" class="back" href="javascript:void(0)" title="返回"></a>
+                <a id="closeArea" class="close" href="javascript:void(0)" title="关闭">&#xe69a;</a>
+            </header>
+            <article id="areaBox">
+                <ul id="areaList" class="area-list"></ul>
+            </article>
+        </section>
+        <!--遮罩层-->
+        <div id="areaMask" class="mask"></div>
+
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/jquery.area.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		var addressPage = function(){
+
+			var addressBox = $('.addressBox');
+
+			// 新增地址
+			$('.addressPage .header .ads').on('click',function(){
+				addressBox.show().addClass('slideInRight');
+				var timer = setTimeout(function(){
+					addressBox.removeClass('slideInRight');
+				},300);
+			});
+
+			// 取消新增
+			addressBox.on('click','.back',function(){
+				addressBox.addClass('slideOutRight');
+				var timer = setTimeout(function(){
+					addressBox.removeClass('slideOutRight').hide();
+				},300);
+			});
+
+		}
+		addressPage();
+	</script>
+</body>
+</html>

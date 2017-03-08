@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>我的足迹</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/user.css">
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container myCollectPage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">我的足迹</div>
+					<div class="headerIcon delete">&#xe645;</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- collect -->
+		<div class="collectList">
+			<div class="item">
+				<div class="sel">
+					<span class="no">&#xe72f;</span>
+					<span class="yes">&#xe730;</span>
+				</div>
+				<div class="img">
+					<img src="images/del/2.jpg" alt="">
+				</div>
+				<div class="text">
+					<h3>进口原浆干红高档礼盒套装</h3>
+					<p>
+						<span>￥280.00</span>
+						<b>￥468.00</b>
+					</p>
+				</div>
+				<div class="del">&#xe69a;</div>
+			</div>
+			<div class="item">
+				<div class="sel">
+					<span class="no">&#xe72f;</span>
+					<span class="yes">&#xe730;</span>
+				</div>
+				<div class="img">
+					<img src="images/del/2.jpg" alt="">
+				</div>
+				<div class="text">
+					<h3>进口原浆干红高档礼盒套装</h3>
+					<p>
+						<span>￥280.00</span>
+						<b>￥468.00</b>
+					</p>
+				</div>
+				<div class="del">&#xe69a;</div>
+			</div>
+			<div class="item">
+				<div class="sel">
+					<span class="no">&#xe72f;</span>
+					<span class="yes">&#xe730;</span>
+				</div>
+				<div class="img">
+					<img src="images/del/2.jpg" alt="">
+				</div>
+				<div class="text">
+					<h3>进口原浆干红高档礼盒套装</h3>
+					<p>
+						<span>￥280.00</span>
+						<b>￥468.00</b>
+					</p>
+				</div>
+				<div class="del">&#xe69a;</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		var myCollect = function(){
+			var item = $('.collectList .item');
+			var allDelete = $('.headerElse .delete');
+
+			item.each(function(){
+
+				var that = $(this);
+
+				// 选中
+				that.on('click','.sel',function(){
+					var sel = $(this);
+					var isSel = sel.hasClass('cur');
+					if(isSel)
+						sel.removeClass('cur');
+					else
+						sel.addClass('cur');
+				});
+
+				// 删除
+				that.on('click','.del',function(){
+					$(this).parents('.item').remove();
+				});
+				
+			});
+
+			// 选中删除
+			allDelete.on('click',function(){
+				var n = 0;
+				item.each(function(){
+					var that = $(this);
+					if($('.sel',that).hasClass('cur'))
+						that.remove();
+					else
+						n++;
+				});
+
+				if(n == item.length)
+					MALL.tips('没有选择目标',5000);
+			});
+		}
+		myCollect();
+	</script>
+</body>
+</html>

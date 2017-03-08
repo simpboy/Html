@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>分类</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container typePage">
+		<!-- header -->
+		<div class="typeHeader">
+			<div class="back" onclick="javascript:history.go(-1);">&#xe693;</div>
+			<div class="search">
+				<p>搜索内容</p>
+				<span>&#xe620;</span>
+			</div>
+		</div>
+		<!-- search -->
+		<div class="typePageBox">
+			<div class="listBox">
+				<dl class="list">
+					<dt>类别1</dt>
+					<dd>
+						<a href="#">胜多负少</a>
+						<a href="#">法撒旦</a>
+						<a href="#">的广告费的</a>
+						<a href="#">胜多负少</a>
+						<a href="#">法撒旦</a>
+						<a href="#">的广告费的</a>
+						<a href="#">胜多负少</a>
+						<a href="#">法撒旦</a>
+						<a href="#">的广告费的</a>
+					</dd>
+				</dl>
+				<dl class="list">
+					<dt>类别1</dt>
+					<dd>
+						<a href="#">胜多负少</a>
+						<a href="#">法撒旦</a>
+						<a href="#">的广告费的</a>
+						<a href="#">胜多负少</a>
+						<a href="#">法撒旦</a>
+						<a href="#">的广告费的</a>
+						<a href="#">胜多负少</a>
+						<a href="#">法撒旦</a>
+						<a href="#">的广告费的</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<!-- 隐藏搜索区域 -->
+		<div class="hideSearch">
+			<div class="top">
+				<div class="back">&#xe693;</div>
+				<div class="search">
+					<input type="text" placeholder="搜索商品" id="searchInput">
+					<label>&#xe620;</label>
+				</div>
+				<div class="clearf"></div>
+				<ul class="searchlist" id="searchlist">
+					<li>
+						<a href="#">1111<b>1</b>11111111</a>
+					</li>
+					<li>
+						<a href="#">222222222</a>
+					</li>
+					<li>
+						<a href="#">333333333333</a>
+					</li>
+					<li>
+						<a href="#">44444444444444</a>
+					</li>
+					<li>
+						<a href="#">55555555555555</a>
+					</li>
+				</ul>
+			</div>
+			<div class="chang">
+				<div class="title">最近搜索</div>
+				<div class="list">
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+					<a href="#">最新型苹果</a>
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+				</div>
+			</div>
+			<div class="chang">
+				<div class="title">热门搜索</div>
+				<div class="list">
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+					<a href="#">最新型苹果</a>
+					<a href="#">苹果</a>
+					<a href="#">香蕉</a>
+					<a href="#">哈密瓜</a>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<ul class="list">
+				<li class="item">
+					<a href="#">
+						<span>&#xe61f;</span>
+						<p>首页</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe67b;</span>
+						<p>分类</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe673;</span>
+						<p>我的商城</p>
+					</a>
+				</li>
+				<li class="item cur">
+					<a href="#">
+						<span>&#xe63f;</span>
+						<p>购物车</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe657;</span>
+						<p>会员中心</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/swiper.jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+    // 显示搜索
+    MALL.showSearchPage('.typeHeader .search p','.hideSearch');
+	</script>
+</body>
+</html>

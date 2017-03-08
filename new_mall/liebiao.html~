@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>分类</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+<a href="address.html">address.html</a></br>
+<a href="buyCar.html">buyCar.html</a></br>
+<a href="commission.html">commission.html</a></br>
+<a href="helplist.html">helplist.html</a></br>
+<a href="index.html">index.html</a></br>
+<a href="liebiao.html">liebiao.html</a></br>
+<a href="list.html">list.html</a></br>
+<a href="myCollect.html">myCollect.html</a></br>
+<a href="myFootPrint.html">myFootPrint.html</a></br>
+<a href="myInfo.html">myInfo.html</a></br>
+<a href="myNotice.html">myNotice.html</a></br>
+<a href="myOrder.html">myOrder.html</a></br>
+<a href="myPay.html">myPay.html</a></br>
+<a href="newsDetail.html">newsDetail.html</a></br>
+<a href="newslist.html">newslist.html</a></br>
+<a href="setMessage.html">setMessage.html</a></br>
+<a href="product.html">product.html</a></br>
+<a href="type.html">type.html</a></br>
+<a href="user.html">user.html</a></br>
+</body>
+</html>

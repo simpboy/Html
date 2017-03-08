@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
+	<title>资讯页面</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+	    var phoneScale = phoneWidth / 640;
+	    var ua = navigator.userAgent;
+	    if (/Android (\d+\.\d+)/.test(ua)) {
+	        var version = parseFloat(RegExp.$1);
+	        // andriod 2.3
+	        if (version > 2.3) {
+	            document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+	            // andriod 2.3以上
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+	        }
+	        // 其他系统
+	    } else {
+	        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	    }
+	</script>
+</head>
+<body>
+	<div class="container typePage">
+		<!-- header -->
+		<div class="headerHeight">
+			<div class="header headerElse">
+				<div class="headerBox">
+					<div class="headerIcon back" onclick="javascript:history.go(-1);">&#xe693;</div>
+					<div class="title">资讯页面</div>
+				</div>
+			</div>
+		</div>
+		<!-- newslist -->
+		<div class="newslist">
+			<div class="list">
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#">
+						<p>这是新闻这是新闻这是新闻</p>
+						<i>&#xe694;</i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<ul class="list">
+				<li class="item">
+					<a href="#">
+						<span>&#xe61f;</span>
+						<p>首页</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe67b;</span>
+						<p>分类</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe673;</span>
+						<p>我的商城</p>
+					</a>
+				</li>
+				<li class="item cur">
+					<a href="#">
+						<span>&#xe63f;</span>
+						<p>购物车</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="#">
+						<span>&#xe657;</span>
+						<p>会员中心</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/swiper.jquery.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+    // 显示搜索
+    MALL.showSearchPage('.typeHeader .search p','.hideSearch');
+	</script>
+</body>
+</html>
